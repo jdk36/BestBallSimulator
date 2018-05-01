@@ -98,7 +98,7 @@ class PlayerRow:
 
 class Player:
     def __init__(self, pos, index, avg, std, avg_td, pre_bust, w_bust):
-        self.name = "pos%d"%(index);
+        self.name = "%s%d"%(pos, index); # not sure this is ever used
         self.avg = avg;
         self.std = std;
         self.avg_td=avg_td;
@@ -203,23 +203,23 @@ positions = [("Quarterbacks", "QB"),\
  ("Defenses", "DEF")];
 
 d = dict();
-for pos1 in positions:
-    d[pos1[1]] = PositionGroup(root, pos1[0], pos1[1]);
+for posPair in positions:
+    d[posPair[1]] = PositionGroup(root, posPair[0], posPair[1]);
 
 def runSeason():
     s = Season(16, d);
     #print(s.playerDict);
-    superScore = 0;
+    totalScore = 0;
     over2500 = 0;
     over2400 = 0;
     for i in range(0, NUM_SEASONS):
         s.simulateSeason();
-        superScore+=s.score;
+        totalScore+=s.score;
         if s.score > 2400:
             over2400+=1;
         if s.score > 2500:
             over2500+=1;
-    print("Avg Score: %f"%(superScore/NUM_SEASONS));
+    print("Avg Score: %f"%(totalScore/NUM_SEASONS));
     print("Over 2400: %.2f"%(over2400/NUM_SEASONS));
     print("Over 2500: %.2f"%(over2500/NUM_SEASONS));
 
