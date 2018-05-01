@@ -1,6 +1,6 @@
 ### Best Ball Simulator
 This is a simulator which will help you gauge your chance to win your MFL10 leage, based on your roster.  You enter your players as a comination of five parameters which relate to your projection for that player's upcoming performance.  These are:
-#### Average Non-Touchdown Points
+**Average Non-Touchdown Points**:
 On average, how many points that are *not* from TD's do you expect your player to score, per week, in the upcoming season.
 #### Standard Deviation
 Specifically, this is the standard deviation of the above number, the non-TD points per week.
