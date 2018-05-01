@@ -1,4 +1,4 @@
-### Best Ball Simulator
+### How do I use it?
 This is a simulator which will help you gauge your chance to win your MFL10 leage, based on your roster.  It can also help you explore roster construction concepts and determine under what coniditions various roster constructions are optimal.  In order to simulate a best ball team, you enter five parameters for each player which relate to your projection for that player's upcoming performance.  These are:
 
 **Average Non-Touchdown Points**: This is the average number of points per week that you expect your player to score which are *not* from touchdowns.  If you want to use the player's previous year as your projection for this year, take their last year's total points, subtract 6*(last year's TD's), then divide by 16.
